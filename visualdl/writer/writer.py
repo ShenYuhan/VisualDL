@@ -469,9 +469,9 @@ class LogWriter(object):
                     writer.add_scalar('hparam/loss', 5*i, i)
         """
         if type(hparams_dict) is not dict:
-            raise TypeError('hparam_dict should be dictionary.')
+            raise TypeError('hparam_dict should be dictionary!')
         if type(metrics_list) is not list:
-            raise TypeError('metric_list should be list.')
+            raise TypeError('metric_list should be list!')
         walltime = round(time.time() * 1000) if walltime is None else walltime
 
         self._get_file_writer().add_record(
